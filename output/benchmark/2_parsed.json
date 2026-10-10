@@ -1,0 +1,394 @@
+[
+  {
+    "id": "P1",
+    "text": "Compute the determinant of the matrix $A = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 4 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 4 \\end{pmatrix}"
+      }
+    ],
+    "type": "matrix",
+    "sub_problems": []
+  },
+  {
+    "id": "P2",
+    "text": "Find the inverse of the matrix $A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 4 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 4 \\end{pmatrix}"
+      }
+    ],
+    "type": "matrix",
+    "sub_problems": []
+  },
+  {
+    "id": "P3",
+    "text": "Find the eigenvalues of $A = \\begin{pmatrix} 3 & 0 \\\\ 0 & -1 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 3 & 0 \\\\ 0 & -1 \\end{pmatrix}"
+      }
+    ],
+    "type": "matrix",
+    "sub_problems": []
+  },
+  {
+    "id": "P4",
+    "text": "Find the rank of the matrix $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{pmatrix}"
+      }
+    ],
+    "type": "matrix",
+    "sub_problems": []
+  },
+  {
+    "id": "P5",
+    "text": "Solve the linear system $Ax = b$ where $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $b = \\begin{pmatrix} 5 \\\\ 11 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "Ax = b"
+      },
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}"
+      },
+      {
+        "type": "inline",
+        "latex": "b = \\begin{pmatrix} 5 \\\\ 11 \\end{pmatrix}"
+      }
+    ],
+    "type": "equation",
+    "sub_problems": []
+  },
+  {
+    "id": "P6",
+    "text": "Compute the trace of $A = \\begin{pmatrix} 5 & 1 \\\\ 2 & 3 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 5 & 1 \\\\ 2 & 3 \\end{pmatrix}"
+      }
+    ],
+    "type": "matrix",
+    "sub_problems": []
+  },
+  {
+    "id": "P7",
+    "text": "Find the eigenvalues of $A = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}"
+      }
+    ],
+    "type": "matrix",
+    "sub_problems": []
+  },
+  {
+    "id": "P8",
+    "text": "Compute the determinant of $A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{pmatrix}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{pmatrix}"
+      }
+    ],
+    "type": "matrix",
+    "sub_problems": []
+  },
+  {
+    "id": "P9",
+    "text": "Evaluate the indefinite integral $\\int x e^{x} dx$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\int x e^{x} dx"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P10",
+    "text": "Evaluate the definite integral $\\int_0^1 x^{2} dx$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\int_0^1 x^{2} dx"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P11",
+    "text": "Find the derivative of $x^{3}\\ln(x)$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "x^{3}\\ln(x)"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P12",
+    "text": "Evaluate the improper integral $\\int_0^{\\infty} e^{-2x} dx$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\int_0^{\\infty} e^{-2x} dx"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P13",
+    "text": "Find the Taylor series of $e^{x}$ about 0 up to order 4.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "e^{x}"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P14",
+    "text": "Calculate the gradient of $f(x,y,z) = x^{2} + y^{2} + z^{2}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "f(x,y,z) = x^{2} + y^{2} + z^{2}"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P15",
+    "text": "Evaluate the indefinite integral $\\int \\frac{1}{1+x^{2}} dx$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\int \\frac{1}{1+x^{2}} dx"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P16",
+    "text": "Solve the differential equation $y' = y$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y' = y"
+      }
+    ],
+    "type": "ode",
+    "sub_problems": []
+  },
+  {
+    "id": "P17",
+    "text": "Solve the differential equation $y' + 2y = 0$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y' + 2y = 0"
+      }
+    ],
+    "type": "ode",
+    "sub_problems": []
+  },
+  {
+    "id": "P18",
+    "text": "Solve the differential equation $y'' - y = 0$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y'' - y = 0"
+      }
+    ],
+    "type": "ode",
+    "sub_problems": []
+  },
+  {
+    "id": "P19",
+    "text": "Solve the differential equation $y'' + y = 0$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y'' + y = 0"
+      }
+    ],
+    "type": "ode",
+    "sub_problems": []
+  },
+  {
+    "id": "P20",
+    "text": "Solve the differential equation $y' = 2x$ with $y(0) = 1$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "y' = 2x"
+      },
+      {
+        "type": "inline",
+        "latex": "y(0) = 1"
+      }
+    ],
+    "type": "ode",
+    "sub_problems": []
+  },
+  {
+    "id": "P21",
+    "text": "Find the Laplace transform of $e^{-2t}$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "e^{-2t}"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P22",
+    "text": "A mass of 2 kg experiences an acceleration of 3 m/s^2. Find the net force.",
+    "math_expressions": [],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P23",
+    "text": "A mass of 4 kg moves at a velocity of 3 m/s. Find the kinetic energy.",
+    "math_expressions": [],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P24",
+    "text": "Two point charges $q1 = 1e-6$ C and $q2 = 2e-6$ C are separated by a distance $r = 0.1$ m. Find the Coulomb force between them.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "q1 = 1e-6"
+      },
+      {
+        "type": "inline",
+        "latex": "q2 = 2e-6"
+      },
+      {
+        "type": "inline",
+        "latex": "r = 0.1"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P25",
+    "text": "A resistor carries a current of 2 A and has a resistance of 5 ohm. Find the voltage across it.",
+    "math_expressions": [],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P26",
+    "text": "A simple pendulum has length $L = 1$ m. Find its period (take $g = 9.8$ m/s^2).",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "L = 1"
+      },
+      {
+        "type": "inline",
+        "latex": "g = 9.8"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P27",
+    "text": "A wave has frequency 50 Hz and wavelength 2 m. Find the wave speed.",
+    "math_expressions": [],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P28",
+    "text": "The following table gives the distribution of $X$. Find the expected value of $X$.\n\n| x | p |\n|---|---|\n| 0 | 0.2 |\n| 1 | 0.5 |\n| 2 | 0.3 |",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "X"
+      },
+      {
+        "type": "inline",
+        "latex": "X"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P29",
+    "text": "The following table gives the distribution of $X$. Find the variance of $X$.\n\n| x | p |\n|---|---|\n| 0 | 0.2 |\n| 1 | 0.5 |\n| 2 | 0.3 |",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "X"
+      },
+      {
+        "type": "inline",
+        "latex": "X"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P30",
+    "text": "Let $X \\sim B(10, 0.5)$. Find the expected value of $X$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "X \\sim B(10, 0.5)"
+      },
+      {
+        "type": "inline",
+        "latex": "X"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  },
+  {
+    "id": "P31",
+    "text": "Let $X \\sim N(0,1)$. Compute $P(X <= 1.96)$.",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "X \\sim N(0,1)"
+      },
+      {
+        "type": "inline",
+        "latex": "P(X <= 1.96)"
+      }
+    ],
+    "type": "calculation",
+    "sub_problems": []
+  }
+]

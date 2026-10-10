@@ -1,0 +1,61 @@
+{
+  "input": "samples/fixtures/berkeley_test2_limits.md",
+  "output_dir": "output\\berkeley-test2",
+  "started": "2026-10-09T22:26:05",
+  "stage1": {
+    "format": ".md",
+    "handler": "read_markdown",
+    "chars": 2657,
+    "sections": 3
+  },
+  "stage2": {
+    "problems": 10,
+    "subjects": {
+      "unknown": 2,
+      "calculus_limits": 8
+    }
+  },
+  "stage3": {
+    "total": 10,
+    "solved": 9,
+    "rate": 0.9,
+    "by_solver": {
+      "sympy_limit": 2,
+      "conceptual_template": 5,
+      "sympy": 2,
+      "none": 0
+    },
+    "by_subject": {
+      "calculus_limits": {
+        "solved": 9,
+        "total": 9
+      },
+      "unknown": {
+        "solved": 0,
+        "total": 1
+      }
+    }
+  },
+  "stage4": {
+    "tex": "output\\berkeley-test2\\homework.tex",
+    "md": "output\\berkeley-test2\\homework.md",
+    "html": "output\\berkeley-test2\\homework.html"
+  },
+  "stage5": {
+    "ok": true,
+    "tier": "browser",
+    "engine": "msedge headless 打印（MathJax 本地渲染）",
+    "pdf": "output\\berkeley-test2\\homework.pdf",
+    "validation": {
+      "path": "output\\berkeley-test2\\homework.pdf",
+      "exists": true,
+      "size": 384369,
+      "pages": 5,
+      "text_chars": 2987,
+      "ok": true,
+      "notes": []
+    }
+  },
+  "elapsed": 3.0,
+  "finished": "2026-10-09T22:26:07"
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "P1",
+    "text": "Warmup questions (20 points, -4 for wrong answers until 0 is reached).\nThe following are supposed to be familiar from 18.02, but may not be. We recommend\nreading all of Strang chapter 1, but especially 1.2 for dot products. Also there is 18.02\nweek 1 course notes on OCW.",
+    "math_expressions": [],
+    "type": "matrix",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "Dot product: if v⋅v =1 we say v is a 1) unit vector 2) zero vector 3) fuzzy vector 4) normal\nvector",
+        "math_expressions": []
+      },
+      {
+        "id": "b",
+        "text": "Dot product: if v⋅v =0 we say v is a 1) unit vector 2) zero vector 3) fuzzy vector 4) normal\nvector",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "Dot product: if v⋅w=0 we say v and w are a) perpendicularb) orthogonal c) at right angles",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "all of the above.",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "Notation: ||v|| = sqrt(v⋅v). (pronounced norm of v). True or False: ||v-w|| ≤ ||v|| + ||w|| for\nall vectors v and w. (Hint:Use the triangle inequality)",
+        "math_expressions": []
+      },
+      {
+        "id": "e",
+        "text": "|v⋅w| = ||v||||w|| / √2 if v and w are at which angles to each other. 1) zero degrees, 2) 45\ndegrees, 3) 60 degrees, 4) 90 degrees. (Hint: Dot product property and also related to\nthe Schwarz Inequality)",
+        "math_expressions": []
+      },
+      {
+        "id": "f",
+        "text": "Determinant: A linear transformation given by a 2x2 matrix A doubles areas. What is\nthe determinant of A?",
+        "math_expressions": []
+      }
+    ]
+  },
+  {
+    "id": "P2",
+    "text": "Warmup questions (20 points, -4 for wrong answers until 0 is reached).\nAnother 18.02 concept is gradients as in the week 5 18.02 course notes on OCW.",
+    "math_expressions": [],
+    "type": "equation",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "The equation 2x+3y+4z = 202- describes a 1) line 2) plane through 0 3) plane not\nthrough 0 4) sphere",
+        "math_expressions": []
+      },
+      {
+        "id": "b",
+        "text": "A normal to your answer in 2a is __________?",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "The equation x2+y2+z2=1 describes a a) line b) plane through 0 c) plane not through 0 d)\nsphere",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "A normal to your answer in c is __________?",
+        "math_expressions": []
+      },
+      {
+        "id": "e",
+        "text": "Calculate the gradient of f(x,y,z) = 2x+3y+4z",
+        "math_expressions": []
+      },
+      {
+        "id": "f",
+        "text": "Calculate the gradient of f(x,y,z) = x2+y2+z2",
+        "math_expressions": []
+      },
+      {
+        "id": "g",
+        "text": "The inequality 2x+3y+4z < 2020 describes a region of 3 dimensional space. Describe\nthat region:_____\n⋅",
+        "math_expressions": []
+      }
+    ]
+  },
+  {
+    "id": "P3",
+    "text": "Am I a (real)vector space? (20 pts) (A few criteria to be a vector space is that real linear\ncombinations make sense, and remain inside the space. In particular there should be a\nzero in the space. Please answer yes or no and explain briefly if I am a vector space.\n(Below you may assume the matrices have real entries.)",
+    "math_expressions": [],
+    "type": "matrix",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "All 3x3 matrices.",
+        "math_expressions": []
+      },
+      {
+        "id": "b",
+        "text": "All 3x3 matrices whose 9 entries add to 1.",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "All 3x3 matrices whose 9 entries add to 0.",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "The 3x3 \"zero\" matrix whose entries are all 0.",
+        "math_expressions": []
+      },
+      {
+        "id": "e",
+        "text": "The 3x3 \"diagonal\" matrices (Wikipedia) whose entries are 0 except for the\nentries on the main diagonal. (This means that A ,A ,and A may not be zero\n11 22 33\nbut the other entries are.)",
+        "math_expressions": []
+      }
+    ]
+  },
+  {
+    "id": "P4",
+    "text": "Am I a (real) vector space (20 pts) ?",
+    "math_expressions": [],
+    "type": "calculation",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "The set of constant functions ( f(x)=c for some c)",
+        "math_expressions": []
+      },
+      {
+        "id": "b",
+        "text": "The set of functions whose value at 0 is 0.",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "The set of functions whose value at 0 is 17.",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "The set of functions whose value at 17 is 0.",
+        "math_expressions": []
+      },
+      {
+        "id": "e",
+        "text": "The set of functions whose value at 17 is 17.",
+        "math_expressions": []
+      }
+    ]
+  },
+  {
+    "id": "P5",
+    "text": "Using Julia as a calculator. Include screen shots and written answers. (20 points with -2\nfor every wrong answer)\n(If you get ERROR:UndefVarError: you may have a typo or you may need\njulia> using LinearAlgebra )( In many cases, copy and paste will just work)",
+    "math_expressions": [],
+    "type": "equation",
+    "sub_problems": [
+      {
+        "id": "a",
+        "text": "Compute the dot product of [1,2,3,4,5] with [1,4,9,16,25]:\njulia> using LinearAlgebra\njulia> [1,2,3,4,5] ⋅ [1,4,9,16,25]\n(you can copy and paste the above, or if you are typing, the \"dot\" is obtained as\n\\cdot+<tab>",
+        "math_expressions": []
+      },
+      {
+        "id": "b",
+        "text": "Compute the norm of the same vectors\njulia> x = [1,2,3,4,5]; norm(x)\njulia> y = [1,4,9,16,25]; norm(y)",
+        "math_expressions": []
+      },
+      {
+        "id": "c",
+        "text": "Calculate the cosine of the angle between these two vectors in 5 dim space. Use acos\nto compute the angle in radians. Multiply by 180/π to get degrees. (You can copy and\npaste 180/π into julia or type \\pi+<tab>.",
+        "math_expressions": []
+      },
+      {
+        "id": "d",
+        "text": "Solve a random 4x4 system of equations\njulia> A = rand(4,4)\njulia> b = rand(4)\njulia> x = A\\b",
+        "math_expressions": []
+      },
+      {
+        "id": "e",
+        "text": "Check your answer\njulia> b-A*x\nWait! You probably got answers around 10-16 or 10-17\nIs Julia broken? No. This is roundoff error, and it's normal and nothing to be afraid\nof.",
+        "math_expressions": []
+      },
+      {
+        "id": "f",
+        "text": "Look at the roundoff error by multiplying by 252\njulia> (b-A*x)*(2^52)\nDo you see simple recognizable numbers? Computers store real numbers with\n52 bits of precision, so a few roundoff errors make (b-A*x)*(2^52) easy to\nunderstand.",
+        "math_expressions": []
+      },
+      {
+        "id": "g",
+        "text": "Elementwise operations vs matrix operations\nType a 3x3 matrix and compute the matrix multiply square and the matrix with\nsquared elements:\njulia>A = [1 2 3; 4 5 6; 7 8 9]\njulia>A^2\njulia>A.^2",
+        "math_expressions": []
+      },
+      {
+        "id": "h",
+        "text": "Find the linear combination of the columns of A that gives b where\njulia>A = [ 0.608074 0.784732 0.824865\n0.840291 0.851875 0.612153\n0.382594 0.963247 0.628243]\n\njulia>b= [0.5797924838583264\n0.5116944696175723\n0.5307580657445938]",
+        "math_expressions": []
+      }
+    ]
+  }
+]

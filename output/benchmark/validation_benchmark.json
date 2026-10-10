@@ -1,0 +1,299 @@
+{
+  "source": "C4C Domain Benchmark — 5 subjects (linear algebra / calculus / ODE / physics / probability)",
+  "official_solutions": "由 SymPy 独立复算 + 教材标准结果双重确认（见 README「结果复现」一节）",
+  "items": [
+    {
+      "id": "P1",
+      "expected": "18",
+      "got": "18",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "归一化后完全一致",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P2",
+      "expected": "[0.5, 0, 0, 0.25]",
+      "got": "\\left[\\begin{matrix}\\frac{1}{2} & 0\\\\0 & \\frac{1}{4}\\end{matrix}\\right]",
+      "kind": "set",
+      "verdict": "correct",
+      "note": "期望数值全部出现 [0.5, 0.0, 0.0, 0.25]",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P3",
+      "expected": "-1 and 3",
+      "got": "\\lambda = -1,\\ 3",
+      "kind": "set",
+      "verdict": "correct",
+      "note": "期望数值全部出现 [-1.0, 3.0]",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P4",
+      "expected": "1",
+      "got": "\\operatorname{rank}(A) = 1",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [1.0]",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P5",
+      "expected": "x = (1, 2)",
+      "got": "x = \\begin{pmatrix}1\\\\2\\end{pmatrix}",
+      "kind": "set",
+      "verdict": "correct",
+      "note": "期望数值全部出现 [1.0, 2.0]",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P6",
+      "expected": "8",
+      "got": "8",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "归一化后完全一致",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P7",
+      "expected": "-1 and 1",
+      "got": "\\lambda = -1,\\ 1",
+      "kind": "set",
+      "verdict": "correct",
+      "note": "期望数值全部出现 [-1.0, 1.0]",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P8",
+      "expected": "6",
+      "got": "6",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "归一化后完全一致",
+      "solver": "sympy.linalg"
+    },
+    {
+      "id": "P9",
+      "expected": "(x-1)e^x + C",
+      "got": "C + \\left(x - 1\\right) e^{x}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「x - 1」",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P10",
+      "expected": "1/3",
+      "got": "\\frac{1}{3}",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [0.3333333333333333]",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P11",
+      "expected": "x^2(3 ln x + 1)",
+      "got": "x^{2} \\left(3 \\log{\\left(x \\right)} + 1\\right)",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「3 log(x) + 1」",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P12",
+      "expected": "1/2",
+      "got": "\\frac{1}{2}",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [0.5]",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P13",
+      "expected": "1 + x + x^2/2 + x^3/6 + x^4/24",
+      "got": "\\frac{x^{5}}{120} + \\frac{x^{4}}{24} + \\frac{x^{3}}{6} + \\frac{x^{2}}{2} + x + 1",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「x^{5}/120」",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P14",
+      "expected": "(2x, 2y, 2z)",
+      "got": "\\left[\\begin{matrix}2 x\\\\2 y\\\\2 z\\end{matrix}\\right]",
+      "kind": "set",
+      "verdict": "correct",
+      "note": "期望数值全部出现 [2.0, 2.0, 2.0]",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P15",
+      "expected": "atan(x) + C",
+      "got": "C + \\operatorname{atan}{\\left(x \\right)}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「atan」",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P16",
+      "expected": "y = C e^x",
+      "got": "C_{1} e^{x}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「e^{x}」",
+      "solver": "sympy.ode"
+    },
+    {
+      "id": "P17",
+      "expected": "y = C e^{-2x}",
+      "got": "C_{1} e^{- 2 x}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「e^{- 2 x}」",
+      "solver": "sympy.ode"
+    },
+    {
+      "id": "P18",
+      "expected": "y = C1 e^x + C2 e^{-x}",
+      "got": "C_{1} e^{- x} + C_{2} e^{x}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「e^{x}」",
+      "solver": "sympy.ode"
+    },
+    {
+      "id": "P19",
+      "expected": "y = C1 cos x + C2 sin x",
+      "got": "C_{1} \\sin{\\left(x \\right)} + C_{2} \\cos{\\left(x \\right)}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「sin」",
+      "solver": "sympy.ode"
+    },
+    {
+      "id": "P20",
+      "expected": "y = x^2 + 1",
+      "got": "x^{2} + 1",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「x^{2} + 1」",
+      "solver": "sympy.ode"
+    },
+    {
+      "id": "P21",
+      "expected": "1/(s+2)",
+      "got": "\\frac{1}{s + 2}",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [1.0, 2.0]",
+      "solver": "sympy.ode"
+    },
+    {
+      "id": "P22",
+      "expected": "6 N",
+      "got": "6",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [6.0]",
+      "solver": "sympy.physics[牛顿第二定律]"
+    },
+    {
+      "id": "P23",
+      "expected": "18 J",
+      "got": "18",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [18.0]",
+      "solver": "sympy.physics[动能]"
+    },
+    {
+      "id": "P24",
+      "expected": "1.798 N",
+      "got": "\\frac{899}{500}",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [1.798]",
+      "solver": "sympy.physics[库仑定律]"
+    },
+    {
+      "id": "P25",
+      "expected": "10 V",
+      "got": "10",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [10.0]",
+      "solver": "sympy.physics[欧姆定律]"
+    },
+    {
+      "id": "P26",
+      "expected": "2.00709 s",
+      "got": "\\frac{200709}{100000}",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [2.00709]",
+      "solver": "sympy.physics[单摆周期]"
+    },
+    {
+      "id": "P27",
+      "expected": "100 m/s",
+      "got": "100",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [100.0]",
+      "solver": "sympy.physics[波速]"
+    },
+    {
+      "id": "P28",
+      "expected": "1.1",
+      "got": "E(X) = 1.1",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [1.1]",
+      "solver": "sympy.probability"
+    },
+    {
+      "id": "P29",
+      "expected": "0.49",
+      "got": "\\operatorname{Var}(X) = 0.49,\\ \\sigma = 0.7",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "数值一致（0.49）",
+      "solver": "sympy.probability"
+    },
+    {
+      "id": "P30",
+      "expected": "5",
+      "got": "E(X) = 5",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "分量逐个一致 [5.0]",
+      "solver": "sympy.probability"
+    },
+    {
+      "id": "P31",
+      "expected": "0.975",
+      "got": "0.975002",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "匹配可接受形式「0.975」",
+      "solver": "sympy.probability"
+    }
+  ],
+  "summary": {
+    "total": 31,
+    "auto_judged": 31,
+    "manual_pending": 0,
+    "by_verdict": {
+      "correct": 31
+    },
+    "auto_accuracy": 1.0,
+    "correct": 31,
+    "partial": 0,
+    "wrong": 0,
+    "unsolved": 0,
+    "lenient_accuracy": 1.0
+  }
+}

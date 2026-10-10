@@ -1,0 +1,15 @@
+### starter kit 在 C4C 跨学科基准题集上的表现
+$ python _work/starter/c4c-homework-solver-starter/scripts/pipeline.py C4C/samples/fixtures/domain_benchmark.md /tmp/c4c_bench_starter
+
+
+============================================================
+📊 流水线执行完成
+   耗时: 0.0 秒
+   题目: 31 道
+   已解: 0 道 (0%)
+   输出文件:
+      1_ingested.json (6,596 bytes)
+      2_parsed.json (9,687 bytes)
+      3_solutions.json (10,653 bytes)
+      homework.tex (7,693 bytes)
+============================================================

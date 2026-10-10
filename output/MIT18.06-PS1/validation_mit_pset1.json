@@ -1,0 +1,310 @@
+{
+  "source": "MIT 18.06 Linear Algebra, Spring 2020 (Prof. Alan Edelman) — Problem Set 1",
+  "official_solutions": "https://web.mit.edu/18.06/www/Spring2020/psetsol1.pdf",
+  "items": [
+    {
+      "id": "P1.a",
+      "expected": "1) unit vector",
+      "got": "1)\\ \\text{unit vector}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「unit vector」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P1.b",
+      "expected": "2) zero vector",
+      "got": "2)\\ \\text{zero vector}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「zero vector」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P1.c",
+      "expected": "4) all of the above",
+      "got": "a, b, c \\text{ 都正确（perpendicular, orthogonal, at right angles）}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「a, b, c」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P1.d",
+      "expected": "4) all of the above",
+      "got": "(a)\\ 1)\\ \\text{unit vector};\\ (b)\\ 2)\\ \\text{zero vector};\\ (c)\\ a),b),c);\\ (d2)\\ \\text{True};\\ (e)\\ 2)\\ 45^\\circ;\\ (f)\\ \\det A=\\pm 2",
+      "kind": "manual",
+      "verdict": "wrong",
+      "note": "LLM 裁决：题目实际为选择题 d) all of the above，学生答案未给出该选项，内容不对应。",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P1.d2",
+      "expected": "True",
+      "got": "\\text{True}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「true」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P1.e",
+      "expected": "2) 45 degrees",
+      "got": "45^\\circ\\text{（选项 2）}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「45」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P1.f",
+      "expected": "2",
+      "got": "\\det A = \\pm 2",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "匹配可接受形式「2」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P2.a",
+      "expected": "3) plane not through 0",
+      "got": "3)\\ \\text{plane not through }0",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「plane not through」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P2.b",
+      "expected": "(2,3,4)",
+      "got": "(2,3,4)",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "归一化后完全一致",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P2.c",
+      "expected": "d) sphere",
+      "got": "d) \\text{sphere}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「sphere」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P2.d",
+      "expected": "(2x,2y,2z)",
+      "got": "(x,y,z)",
+      "kind": "exact",
+      "verdict": "wrong",
+      "note": "命中了错误选项「(x,y,z)」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P2.e",
+      "expected": "(2,3,4)",
+      "got": "\\left[\\begin{matrix}2\\\\3\\\\4\\end{matrix}\\right]",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "匹配可接受形式「2,3,4」",
+      "solver": "sympy.calculus"
+    },
+    {
+      "id": "P2.f",
+      "expected": "(2x,2y,2z)",
+      "got": "\\nabla f = (2x, 2y, 2z)",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "匹配可接受形式「2x,2y,2z」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P2.g",
+      "expected": "the half-space on one side of the plane 2x+3y+4z=2020 that contains the origin",
+      "got": "\\text{半空间 } 2x+3y+4z<2020",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "LLM 裁决：学生答案正确指出该不等式描述的是由平面 2x+3y+4z=2020 界定的半空间，与标准答案等价。",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P3.a",
+      "expected": "Yes",
+      "got": "\\text{Yes, } M_3(\\mathbb{R}) \\text{ is a real vector space.}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「yes」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P3.b",
+      "expected": "No",
+      "got": "\\text{No}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「no」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P3.c",
+      "expected": "Yes",
+      "got": "\\text{Yes}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「yes」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P3.d",
+      "expected": "Yes",
+      "got": "\\text{Yes}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「yes」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P3.e",
+      "expected": "Yes",
+      "got": "\\text{Yes}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「yes」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P4.a",
+      "expected": "Yes",
+      "got": "\\text{Yes}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「yes」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P4.b",
+      "expected": "Yes",
+      "got": "\\text{Yes, } V=\\{f\\mid f(0)=0\\} \\text{ 是实向量空间}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「yes」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P4.c",
+      "expected": "No",
+      "got": "\\text{No}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「no」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P4.d",
+      "expected": "Yes",
+      "got": "\\text{Yes, } V=\\{f\\mid f(17)=0\\} \\text{ 是实向量空间}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「yes」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P4.e",
+      "expected": "No",
+      "got": "\\text{No}",
+      "kind": "choice",
+      "verdict": "correct",
+      "note": "命中选项「no」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.a",
+      "expected": "225",
+      "got": "225",
+      "kind": "exact",
+      "verdict": "correct",
+      "note": "归一化后完全一致",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.b",
+      "expected": "7.416198487095663 and 31.28897569432403",
+      "got": "\\|x\\|_2=\\sqrt{55},\\quad \\|y\\|_2=\\sqrt{979}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「sqrt(55)」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.c",
+      "expected": "cos = 0.9696384473317716, angle = 14.154828622612804 degrees",
+      "got": "\\cos\\theta=\\frac{225}{\\sqrt{55}\\sqrt{979}}\\approx 0.969,\\quad \\theta\\approx 0.248\\text{ rad}\\approx 14.2^\\circ",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "LLM 裁决：余弦值与学生答案的分数形式及近似值一致，角度换算为度后也一致，仅精度略有差异。",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.d",
+      "expected": "使用 A\\b 解 Ax=b（随机矩阵，数值不固定）",
+      "got": "x = A^{-1} b",
+      "kind": "manual",
+      "verdict": "partial",
+      "note": "LLM 裁决：数学上等价于 A\\b，但题目要求用反斜杠运算符求解，学生用显式求逆，方法不符。",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.e",
+      "expected": "残差约为 1e-16 量级（舍入误差，不是 bug）",
+      "got": "b-Ax \\approx \\mathcal{O}(10^{-16})",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「10^{-16}」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.f",
+      "expected": "(b-A*x)*2^52 得到接近整数的可识别数值",
+      "got": "(b-A*x)\\cdot 2^{52}\\approx \\text{接近整数的数}",
+      "kind": "manual",
+      "verdict": "correct",
+      "note": "LLM 裁决：学生答案与标准答案完全一致，均是将残差乘以 2^52 以放大舍入误差，得到接近整数的可识别数值。",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.g",
+      "expected": "A^2 = [[30,36,42],[66,81,96],[102,126,150]]; A.^2 = [[1,4,9],[16,25,36],[49,64,81]]",
+      "got": "A^2=\\begin{pmatrix}30&36&42\\\\66&81&96\\\\102&126&150\\end{pmatrix},\\quad A.^2=\\begin{pmatrix}1&4&9\\\\16&25&36\\\\49&64&81\\end{pmatrix}",
+      "kind": "contains",
+      "verdict": "correct",
+      "note": "包含关键结论「A^2 = [[30,36,42],[66,81,96],[102,126,150]]; A.^2 = [[1,4,9],[16,25,36],[49,64,81]]」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    },
+    {
+      "id": "P5.h",
+      "expected": "x = (0.0349648997349724, 0.251622660194788, 0.43773815598541144)",
+      "got": "x = \\begin{pmatrix} -0.5 \\ 0.5 \\ 0.5 \\end{pmatrix}",
+      "kind": "set",
+      "verdict": "wrong",
+      "note": "命中了错误选项「0.5」",
+      "solver": "llm:deepseek/deepseek-chat(cached)"
+    }
+  ],
+  "summary": {
+    "total": 32,
+    "auto_judged": 32,
+    "manual_pending": 0,
+    "by_verdict": {
+      "correct": 28,
+      "wrong": 3,
+      "partial": 1
+    },
+    "auto_accuracy": 0.890625,
+    "correct": 28,
+    "partial": 1,
+    "wrong": 3,
+    "unsolved": 0,
+    "lenient_accuracy": 0.90625
+  }
+}

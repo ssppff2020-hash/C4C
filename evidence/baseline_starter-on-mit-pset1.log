@@ -1,0 +1,11 @@
+### starter kit 在 MIT 18.06 PSET1（真实作业 PDF）上的表现
+$ python _work/starter/c4c-homework-solver-starter/scripts/pipeline.py C4C/samples/real/mit1806_pset1.pdf /tmp/c4c_mit_starter
+
+   输入: C4C/samples/real/mit1806_pset1.pdf
+   输出: C:\Users\spf_2\AppData\Local\Temp\c4c_mit_starter
+============================================================
+
+📄 Stage 1: 文档摄入
+   ❌ 摄入失败: PDF 摄入未实现。
+提示: pip install pdfplumber
+参考: pdfplumber.open(path).pages[i].extract_text()

@@ -1,0 +1,57 @@
+{
+  "input": "samples/fixtures/berkeley_test1_tangent_epsilon_delta.md",
+  "output_dir": "output\\berkeley-test1",
+  "started": "2026-10-09T22:26:01",
+  "stage1": {
+    "format": ".md",
+    "handler": "read_markdown",
+    "chars": 2056,
+    "sections": 3
+  },
+  "stage2": {
+    "problems": 8,
+    "subjects": {
+      "unknown": 7,
+      "calculus_limits": 1
+    }
+  },
+  "stage3": {
+    "total": 8,
+    "solved": 8,
+    "rate": 1.0,
+    "by_solver": {
+      "conceptual_template": 2,
+      "epsilon_delta_template": 3,
+      "epsilon_delta_computation": 1,
+      "sympy": 2
+    },
+    "by_subject": {
+      "calculus_limits": {
+        "solved": 8,
+        "total": 8
+      }
+    }
+  },
+  "stage4": {
+    "tex": "output\\berkeley-test1\\homework.tex",
+    "md": "output\\berkeley-test1\\homework.md",
+    "html": "output\\berkeley-test1\\homework.html"
+  },
+  "stage5": {
+    "ok": true,
+    "tier": "browser",
+    "engine": "msedge headless 打印（MathJax 本地渲染）",
+    "pdf": "output\\berkeley-test1\\homework.pdf",
+    "validation": {
+      "path": "output\\berkeley-test1\\homework.pdf",
+      "exists": true,
+      "size": 196851,
+      "pages": 4,
+      "text_chars": 2216,
+      "ok": true,
+      "notes": []
+    }
+  },
+  "elapsed": 2.8,
+  "finished": "2026-10-09T22:26:04"
+}

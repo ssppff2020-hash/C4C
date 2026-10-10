@@ -1,0 +1,63 @@
+{
+  "input": "samples/real/mit1806_pset1.pdf",
+  "output_dir": "output\\MIT18.06-PS1",
+  "started": "2026-10-09T22:29:58",
+  "stage1": {
+    "format": ".pdf",
+    "handler": "read_pdf_text",
+    "chars": 4757,
+    "sections": 1
+  },
+  "stage2": {
+    "problems": 5,
+    "subjects": {
+      "unknown": 2,
+      "calculus": 1,
+      "linalg": 2
+    }
+  },
+  "stage3": {
+    "total": 5,
+    "solved": 5,
+    "rate": 1.0,
+    "by_solver": {
+      "mixed": 5
+    },
+    "by_subject": {
+      "unknown": {
+        "solved": 2,
+        "total": 2
+      },
+      "calculus": {
+        "solved": 1,
+        "total": 1
+      },
+      "linalg": {
+        "solved": 2,
+        "total": 2
+      }
+    }
+  },
+  "stage4": {
+    "tex": "output\\MIT18.06-PS1\\homework.tex",
+    "md": "output\\MIT18.06-PS1\\homework.md",
+    "html": "output\\MIT18.06-PS1\\homework.html"
+  },
+  "stage5": {
+    "ok": true,
+    "tier": "browser",
+    "engine": "msedge headless 打印（MathJax 本地渲染）",
+    "pdf": "output\\MIT18.06-PS1\\homework.pdf",
+    "validation": {
+      "path": "output\\MIT18.06-PS1\\homework.pdf",
+      "exists": true,
+      "size": 364042,
+      "pages": 3,
+      "text_chars": 1596,
+      "ok": true,
+      "notes": []
+    }
+  },
+  "elapsed": 3.3,
+  "finished": "2026-10-09T22:30:01"
+}

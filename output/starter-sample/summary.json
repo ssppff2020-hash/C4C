@@ -1,0 +1,72 @@
+{
+  "input": "samples/fixtures/starter_sample_homework.md",
+  "output_dir": "output\\starter-sample",
+  "started": "2026-10-09T22:23:16",
+  "stage1": {
+    "format": ".md",
+    "handler": "read_markdown",
+    "chars": 772,
+    "sections": 4
+  },
+  "stage2": {
+    "problems": 10,
+    "subjects": {
+      "calculus": 4,
+      "calculus_limits": 1,
+      "unknown": 2,
+      "linalg": 2,
+      "ode": 1
+    }
+  },
+  "stage3": {
+    "total": 10,
+    "solved": 10,
+    "rate": 1.0,
+    "by_solver": {
+      "sympy.calculus": 4,
+      "sympy": 3,
+      "sympy.linalg": 2,
+      "sympy.ode": 1
+    },
+    "by_subject": {
+      "微积分": {
+        "solved": 4,
+        "total": 4
+      },
+      "calculus_limits": {
+        "solved": 3,
+        "total": 3
+      },
+      "线性代数": {
+        "solved": 2,
+        "total": 2
+      },
+      "微分方程": {
+        "solved": 1,
+        "total": 1
+      }
+    }
+  },
+  "stage4": {
+    "tex": "output\\starter-sample\\homework.tex",
+    "md": "output\\starter-sample\\homework.md",
+    "html": "output\\starter-sample\\homework.html"
+  },
+  "stage5": {
+    "ok": true,
+    "tier": "browser",
+    "engine": "msedge headless 打印（MathJax 本地渲染）",
+    "pdf": "output\\starter-sample\\homework.pdf",
+    "validation": {
+      "path": "output\\starter-sample\\homework.pdf",
+      "exists": true,
+      "size": 279975,
+      "pages": 4,
+      "text_chars": 1234,
+      "ok": true,
+      "notes": []
+    }
+  },
+  "elapsed": 3.0,
+  "finished": "2026-10-09T22:23:19"
+}

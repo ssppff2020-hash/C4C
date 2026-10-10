@@ -1,0 +1,12 @@
+### starter kit 在自己的示例作业上的表现（混合：微积分+线代+ODE）
+$ python _work/starter/c4c-homework-solver-starter/scripts/pipeline.py _work/starter/c4c-homework-solver-starter/examples/sample_homework.md /tmp/c4c_s1
+
+   耗时: 0.0 秒
+   题目: 10 道
+   已解: 1 道 (10%)
+   输出文件:
+      1_ingested.json (1,882 bytes)
+      2_parsed.json (2,809 bytes)
+      3_solutions.json (3,229 bytes)
+      homework.tex (2,835 bytes)
+============================================================

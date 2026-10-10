@@ -1,0 +1,658 @@
+[
+  {
+    "problem_id": "P1",
+    "problem_text": "Compute the determinant of the matrix $A = \\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 1 & 4 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "取矩阵 $A = \\left[\\begin{matrix}2 & 1 & 0\\\\1 & 3 & 1\\\\0 & 1 & 4\\end{matrix}\\right]$，阶数 $n = 3$。",
+      "按定义展开：$\\det A = \\sum_{\\sigma \\in S_n} \\operatorname{sgn}(\\sigma)\\prod_{i=1}^{n} a_{i,\\sigma(i)}$（$n=3$ 时共 $6$ 项）。",
+      "用余子式展开/行变换化简，得 $\\det A = 18$。",
+      "交叉核验：特征值 $\\lambda = 3,\\ 3 - \\sqrt{3},\\ \\sqrt{3} + 3$，$\\prod \\lambda = 18 = \\det A$ ✓。"
+    ],
+    "answer": "18",
+    "answer_latex": "18",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "verification": {
+      "method": "SymPy Matrix.det（精确有理数运算）",
+      "check": "det = 18"
+    },
+    "elapsed": 0.119
+  },
+  {
+    "problem_id": "P2",
+    "problem_text": "Find the inverse of the matrix $A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 4 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "$A = \\left[\\begin{matrix}2 & 0\\\\0 & 4\\end{matrix}\\right]$，$\\det A = 8 \\neq 0$，故 $A$ 可逆。",
+      "用伴随矩阵公式 $A^{-1} = \\dfrac{1}{\\det A}\\,\\operatorname{adj}(A)$。",
+      "得 $A^{-1} = \\left[\\begin{matrix}\\frac{1}{2} & 0\\\\0 & \\frac{1}{4}\\end{matrix}\\right]$。",
+      "核验：$A A^{-1} = \\left[\\begin{matrix}1 & 0\\\\0 & 1\\end{matrix}\\right]$，为单位阵。"
+    ],
+    "answer": "\\left[\\begin{matrix}\\frac{1}{2} & 0\\\\0 & \\frac{1}{4}\\end{matrix}\\right]",
+    "answer_latex": "\\left[\\begin{matrix}\\frac{1}{2} & 0\\\\0 & \\frac{1}{4}\\end{matrix}\\right]",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "verification": {
+      "method": "A·A⁻¹ 反代回乘",
+      "check": "乘积为单位矩阵"
+    },
+    "elapsed": 0.006
+  },
+  {
+    "problem_id": "P3",
+    "problem_text": "Find the eigenvalues of $A = \\begin{pmatrix} 3 & 0 \\\\ 0 & -1 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "$A = \\left[\\begin{matrix}3 & 0\\\\0 & -1\\end{matrix}\\right]$。",
+      "特征方程 $\\det(A - \\lambda I) = 0$，即 $\\lambda^{2} - 2 \\lambda - 3 = 0$。",
+      "解得特征值 $\\lambda = -1$。",
+      "解得特征值 $\\lambda = 3$。"
+    ],
+    "answer": "\\lambda = -1,\\ 3",
+    "answer_latex": "\\lambda = -1,\\ 3",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "verification": {
+      "method": "特征多项式 + eigvals 交叉核对",
+      "check": "eigenvals = {3: 1, -1: 1}"
+    },
+    "elapsed": 0.003
+  },
+  {
+    "problem_id": "P4",
+    "problem_text": "Find the rank of the matrix $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "$A = \\left[\\begin{matrix}1 & 2 & 3\\\\2 & 4 & 6\\\\3 & 6 & 9\\end{matrix}\\right]$。",
+      "对 $A$ 做初等行变换（高斯-若尔当消元）。",
+      "得到最简行阶梯形 $\\operatorname{rref}(A) = \\left[\\begin{matrix}1 & 2 & 3\\\\0 & 0 & 0\\\\0 & 0 & 0\\end{matrix}\\right]$。",
+      "主元列号：$[1]$（1 起数）。",
+      "故 $\\operatorname{rank}(A) = 1$。"
+    ],
+    "answer": "\\operatorname{rank}(A) = 1",
+    "answer_latex": "\\operatorname{rank}(A) = 1",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "elapsed": 0.005
+  },
+  {
+    "problem_id": "P5",
+    "problem_text": "Solve the linear system $Ax = b$ where $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and $b = \\begin{pmatrix} 5 \\\\ 11 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "$A = \\left[\\begin{matrix}1 & 2\\\\3 & 4\\end{matrix}\\right]$，$b = \\left[\\begin{matrix}5\\\\11\\end{matrix}\\right]$，解 $Ax = b$。",
+      "增广矩阵 $[A|b] = \\left[\\begin{matrix}1 & 2 & 5\\\\3 & 4 & 11\\end{matrix}\\right]$。",
+      "行化简得 $\\operatorname{rref}[A|b] = \\left[\\begin{matrix}1 & 0 & 1\\\\0 & 1 & 2\\end{matrix}\\right]$。",
+      "自由变量个数为 0，解唯一：由回代得",
+      "$x_{1} = 1$",
+      "$x_{2} = 2$",
+      "核验：$A x = \\left[\\begin{matrix}5\\\\11\\end{matrix}\\right]$ $= b$。"
+    ],
+    "answer": "x = \\begin{pmatrix}1\\\\2\\end{pmatrix}",
+    "answer_latex": "x = \\begin{pmatrix}1\\\\2\\end{pmatrix}",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "verification": {
+      "method": "Ax 反代回乘核验",
+      "check": "Ax == b"
+    },
+    "elapsed": 0.007
+  },
+  {
+    "problem_id": "P6",
+    "problem_text": "Compute the trace of $A = \\begin{pmatrix} 5 & 1 \\\\ 2 & 3 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "$A = \\left[\\begin{matrix}5 & 1\\\\2 & 3\\end{matrix}\\right]$。",
+      "迹 = 主对角线元素之和 $= 8$。",
+      "另一条路：迹 = 特征值之和 $= 8$，两法一致 ✓。"
+    ],
+    "answer": "8",
+    "answer_latex": "8",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "elapsed": 0.005
+  },
+  {
+    "problem_id": "P7",
+    "problem_text": "Find the eigenvalues of $A = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "$A = \\left[\\begin{matrix}0 & 1\\\\1 & 0\\end{matrix}\\right]$。",
+      "特征方程 $\\det(A - \\lambda I) = 0$，即 $\\lambda^{2} - 1 = 0$。",
+      "解得特征值 $\\lambda = -1$。",
+      "解得特征值 $\\lambda = 1$。"
+    ],
+    "answer": "\\lambda = -1,\\ 1",
+    "answer_latex": "\\lambda = -1,\\ 1",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "verification": {
+      "method": "特征多项式 + eigvals 交叉核对",
+      "check": "eigenvals = {-1: 1, 1: 1}"
+    },
+    "elapsed": 0.003
+  },
+  {
+    "problem_id": "P8",
+    "problem_text": "Compute the determinant of $A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{pmatrix}$.",
+    "solved": true,
+    "steps": [
+      "取矩阵 $A = \\left[\\begin{matrix}1 & 0 & 0\\\\0 & 2 & 0\\\\0 & 0 & 3\\end{matrix}\\right]$，阶数 $n = 3$。",
+      "按定义展开：$\\det A = \\sum_{\\sigma \\in S_n} \\operatorname{sgn}(\\sigma)\\prod_{i=1}^{n} a_{i,\\sigma(i)}$（$n=3$ 时共 $6$ 项）。",
+      "用余子式展开/行变换化简，得 $\\det A = 6$。",
+      "交叉核验：特征值 $\\lambda = 1,\\ 2,\\ 3$，$\\prod \\lambda = 6 = \\det A$ ✓。"
+    ],
+    "answer": "6",
+    "answer_latex": "6",
+    "solver": "sympy.linalg",
+    "confidence": 1.0,
+    "subject": "线性代数",
+    "sub_solutions": [],
+    "verification": {
+      "method": "SymPy Matrix.det（精确有理数运算）",
+      "check": "det = 6"
+    },
+    "elapsed": 0.005
+  },
+  {
+    "problem_id": "P9",
+    "problem_text": "Evaluate the indefinite integral $\\int x e^{x} dx$.",
+    "solved": true,
+    "steps": [
+      "求不定积分 $\\displaystyle\\int x e^{x}\\, dx$。",
+      "选择合适的技巧（换元 / 分部积分 / 部分分式 / 基本积分表）。",
+      "得 $F(x) = \\left(x - 1\\right) e^{x} + C$。",
+      "核验：$\\dfrac{d}{dx}\\left(\\left(x - 1\\right) e^{x}\\right) = x e^{x} = $ 被积函数 ✓。"
+    ],
+    "answer": "C + \\left(x - 1\\right) e^{x}",
+    "answer_latex": "C + \\left(x - 1\\right) e^{x}",
+    "solver": "sympy.calculus",
+    "confidence": 1.0,
+    "subject": "微积分",
+    "sub_solutions": [],
+    "verification": {
+      "method": "求导回代核验",
+      "check": "d/dx(F) == integrand"
+    },
+    "elapsed": 0.045
+  },
+  {
+    "problem_id": "P10",
+    "problem_text": "Evaluate the definite integral $\\int_0^1 x^{2} dx$.",
+    "solved": true,
+    "steps": [
+      "求定积分 $\\displaystyle\\int_{0}^{1} x^{2}\\, dx$。",
+      "先求原函数 $F(x) = \\frac{x^{3}}{3}$。",
+      "牛顿-莱布尼茨公式：$F(1) - F(0) = \\frac{1}{3}$。"
+    ],
+    "answer": "\\frac{1}{3}",
+    "answer_latex": "\\frac{1}{3}",
+    "solver": "sympy.calculus",
+    "confidence": 1.0,
+    "subject": "微积分",
+    "sub_solutions": [],
+    "elapsed": 0.006
+  },
+  {
+    "problem_id": "P11",
+    "problem_text": "Find the derivative of $x^{3}\\ln(x)$.",
+    "solved": true,
+    "steps": [
+      "已知 $f(x) = x^{3} \\log{\\left(x \\right)}$。",
+      "求一阶导：$f'(x) = \\dfrac{d}{dx}\\left(x^{3} \\log{\\left(x \\right)}\\right)$。",
+      "逐项使用 $(x^n)' = nx^{n-1}$、$(\\sin x)' = \\cos x$、$(e^x)' = e^x$、$(\\ln x)' = 1/x$ 与乘积/链式法则。",
+      "得 $f'(x) = x^{2} \\left(3 \\log{\\left(x \\right)} + 1\\right)$。"
+    ],
+    "answer": "x^{2} \\left(3 \\log{\\left(x \\right)} + 1\\right)",
+    "answer_latex": "x^{2} \\left(3 \\log{\\left(x \\right)} + 1\\right)",
+    "solver": "sympy.calculus",
+    "confidence": 1.0,
+    "subject": "微积分",
+    "sub_solutions": [],
+    "elapsed": 0.014
+  },
+  {
+    "problem_id": "P12",
+    "problem_text": "Evaluate the improper integral $\\int_0^{\\infty} e^{-2x} dx$.",
+    "solved": true,
+    "steps": [
+      "求定积分 $\\displaystyle\\int_{0}^{\\infty} e^{- 2 x}\\, dx$。",
+      "这是**反常积分**，用 $\\lim_{b\\to\\infty}F(b)$ 取极限判定收敛性。",
+      "先求原函数 $F(x) = - \\frac{e^{- 2 x}}{2}$。",
+      "牛顿-莱布尼茨公式：$F(\\infty) - F(0) = \\frac{1}{2}$。"
+    ],
+    "answer": "\\frac{1}{2}",
+    "answer_latex": "\\frac{1}{2}",
+    "solver": "sympy.calculus",
+    "confidence": 1.0,
+    "subject": "微积分",
+    "sub_solutions": [],
+    "elapsed": 0.094
+  },
+  {
+    "problem_id": "P13",
+    "problem_text": "Find the Taylor series of $e^{x}$ about 0 up to order 4.",
+    "solved": true,
+    "steps": [
+      "$f(x) = e^{x}$，展开中心 $0$，展开到 $n=5$ 阶。",
+      "套用 $f(x) = \\sum_{k=0}^{n} \\dfrac{f^{(k)}(a)}{k!}(x-a)^k + R_n(x)$。",
+      "$f^{(0)}(0) = 1$，系数 $\\dfrac{f^{(0)}}{0!} = 1$。",
+      "$f^{(1)}(0) = 1$，系数 $\\dfrac{f^{(1)}}{1!} = 1$。",
+      "$f^{(2)}(0) = 1$，系数 $\\dfrac{f^{(2)}}{2!} = \\frac{1}{2}$。",
+      "$f^{(3)}(0) = 1$，系数 $\\dfrac{f^{(3)}}{3!} = \\frac{1}{6}$。",
+      "$f^{(4)}(0) = 1$，系数 $\\dfrac{f^{(4)}}{4!} = \\frac{1}{24}$。",
+      "$f^{(5)}(0) = 1$，系数 $\\dfrac{f^{(5)}}{5!} = \\frac{1}{120}$。",
+      "所以 $f(x) \\approx \\frac{x^{5}}{120} + \\frac{x^{4}}{24} + \\frac{x^{3}}{6} + \\frac{x^{2}}{2} + x + 1$。"
+    ],
+    "answer": "\\frac{x^{5}}{120} + \\frac{x^{4}}{24} + \\frac{x^{3}}{6} + \\frac{x^{2}}{2} + x + 1",
+    "answer_latex": "\\frac{x^{5}}{120} + \\frac{x^{4}}{24} + \\frac{x^{3}}{6} + \\frac{x^{2}}{2} + x + 1",
+    "solver": "sympy.calculus",
+    "confidence": 1.0,
+    "subject": "微积分",
+    "sub_solutions": [],
+    "elapsed": 0.029
+  },
+  {
+    "problem_id": "P14",
+    "problem_text": "Calculate the gradient of $f(x,y,z) = x^{2} + y^{2} + z^{2}$.",
+    "solved": true,
+    "steps": [
+      "$f('x', 'y', 'z') = x^{2} + y^{2} + z^{2}$。",
+      "梯度算子 $\\nabla = \\left(\\dfrac{\\partial}{\\partial x_1},\\dots\\right)$，逐分量求偏导。",
+      "$\\dfrac{\\partial f}{\\partial x} = 2 x$",
+      "$\\dfrac{\\partial f}{\\partial y} = 2 y$",
+      "$\\dfrac{\\partial f}{\\partial z} = 2 z$",
+      "$\\nabla f = \\left[\\begin{matrix}2 x\\\\2 y\\\\2 z\\end{matrix}\\right]$。"
+    ],
+    "answer": "\\left[\\begin{matrix}2 x\\\\2 y\\\\2 z\\end{matrix}\\right]",
+    "answer_latex": "\\left[\\begin{matrix}2 x\\\\2 y\\\\2 z\\end{matrix}\\right]",
+    "solver": "sympy.calculus",
+    "confidence": 1.0,
+    "subject": "微积分",
+    "sub_solutions": [],
+    "elapsed": 0.007
+  },
+  {
+    "problem_id": "P15",
+    "problem_text": "Evaluate the indefinite integral $\\int \\frac{1}{1+x^{2}} dx$.",
+    "solved": true,
+    "steps": [
+      "求不定积分 $\\displaystyle\\int \\frac{1}{x^{2} + 1}\\, dx$。",
+      "选择合适的技巧（换元 / 分部积分 / 部分分式 / 基本积分表）。",
+      "得 $F(x) = \\operatorname{atan}{\\left(x \\right)} + C$。",
+      "核验：$\\dfrac{d}{dx}\\left(\\operatorname{atan}{\\left(x \\right)}\\right) = \\frac{1}{x^{2} + 1} = $ 被积函数 ✓。"
+    ],
+    "answer": "C + \\operatorname{atan}{\\left(x \\right)}",
+    "answer_latex": "C + \\operatorname{atan}{\\left(x \\right)}",
+    "solver": "sympy.calculus",
+    "confidence": 1.0,
+    "subject": "微积分",
+    "sub_solutions": [],
+    "verification": {
+      "method": "求导回代核验",
+      "check": "d/dx(F) == integrand"
+    },
+    "elapsed": 0.019
+  },
+  {
+    "problem_id": "P16",
+    "problem_text": "Solve the differential equation $y' = y$.",
+    "solved": true,
+    "steps": [
+      "原方程：$\\frac{d}{d x} y{\\left(x \\right)} = y{\\left(x \\right)}$。",
+      "这是一个 1 阶线性常微分方程。",
+      "解得：$$y{\\left(x \\right)} = C_{1} e^{x}$$",
+      "（通解中的 $C_1, C_2, \\dots$ 为任意常数；给出初值即可确定。）",
+      "核验：把解代回原方程，两边恒等 ✓。"
+    ],
+    "answer": "C_{1} e^{x}",
+    "answer_latex": "C_{1} e^{x}",
+    "solver": "sympy.ode",
+    "confidence": 1.0,
+    "subject": "微分方程",
+    "sub_solutions": [],
+    "verification": {
+      "method": "解代回原方程",
+      "check": "residual == 0"
+    },
+    "elapsed": 0.036
+  },
+  {
+    "problem_id": "P17",
+    "problem_text": "Solve the differential equation $y' + 2y = 0$.",
+    "solved": true,
+    "steps": [
+      "原方程：$2 y{\\left(x \\right)} + \\frac{d}{d x} y{\\left(x \\right)} = 0$。",
+      "这是一个 1 阶线性常微分方程。",
+      "解得：$$y{\\left(x \\right)} = C_{1} e^{- 2 x}$$",
+      "（通解中的 $C_1, C_2, \\dots$ 为任意常数；给出初值即可确定。）",
+      "核验：把解代回原方程，两边恒等 ✓。"
+    ],
+    "answer": "C_{1} e^{- 2 x}",
+    "answer_latex": "C_{1} e^{- 2 x}",
+    "solver": "sympy.ode",
+    "confidence": 1.0,
+    "subject": "微分方程",
+    "sub_solutions": [],
+    "verification": {
+      "method": "解代回原方程",
+      "check": "residual == 0"
+    },
+    "elapsed": 0.063
+  },
+  {
+    "problem_id": "P18",
+    "problem_text": "Solve the differential equation $y'' - y = 0$.",
+    "solved": true,
+    "steps": [
+      "原方程：$- y{\\left(x \\right)} + \\frac{d^{2}}{d x^{2}} y{\\left(x \\right)} = 0$。",
+      "这是一个 2 阶线性常微分方程。",
+      "特征方程：$r^{2} - 1 = 0$。",
+      "特征根：$\\left[ -1, \\  1\\right]$。",
+      "两个相异实根 ⟹ 通解形如 $y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$。",
+      "解得：$$y{\\left(x \\right)} = C_{1} e^{- x} + C_{2} e^{x}$$",
+      "（通解中的 $C_1, C_2, \\dots$ 为任意常数；给出初值即可确定。）",
+      "核验：把解代回原方程，两边恒等 ✓。"
+    ],
+    "answer": "C_{1} e^{- x} + C_{2} e^{x}",
+    "answer_latex": "C_{1} e^{- x} + C_{2} e^{x}",
+    "solver": "sympy.ode",
+    "confidence": 1.0,
+    "subject": "微分方程",
+    "sub_solutions": [],
+    "verification": {
+      "method": "解代回原方程",
+      "check": "residual == 0"
+    },
+    "elapsed": 0.085
+  },
+  {
+    "problem_id": "P19",
+    "problem_text": "Solve the differential equation $y'' + y = 0$.",
+    "solved": true,
+    "steps": [
+      "原方程：$y{\\left(x \\right)} + \\frac{d^{2}}{d x^{2}} y{\\left(x \\right)} = 0$。",
+      "这是一个 2 阶线性常微分方程。",
+      "特征方程：$r^{2} + 1 = 0$。",
+      "特征根：$\\left[ - i, \\  i\\right]$。",
+      "共轭复根 $\\alpha \\pm \\beta i$ ⟹ 通解形如 $y = e^{\\alpha x}(C_1\\cos\\beta x + C_2\\sin\\beta x)$。",
+      "解得：$$y{\\left(x \\right)} = C_{1} \\sin{\\left(x \\right)} + C_{2} \\cos{\\left(x \\right)}$$",
+      "（通解中的 $C_1, C_2, \\dots$ 为任意常数；给出初值即可确定。）"
+    ],
+    "answer": "C_{1} \\sin{\\left(x \\right)} + C_{2} \\cos{\\left(x \\right)}",
+    "answer_latex": "C_{1} \\sin{\\left(x \\right)} + C_{2} \\cos{\\left(x \\right)}",
+    "solver": "sympy.ode",
+    "confidence": 0.6,
+    "subject": "微分方程",
+    "sub_solutions": [],
+    "verification": {
+      "method": "解代回原方程",
+      "check": "residual = C1*sin(x) + C2*cos(x) - (C1*sin(x) + C2*cos(x))"
+    },
+    "elapsed": 0.106
+  },
+  {
+    "problem_id": "P20",
+    "problem_text": "Solve the differential equation $y' = 2x$ with $y(0) = 1$.",
+    "solved": true,
+    "steps": [
+      "原方程：$\\frac{d}{d x} y{\\left(x \\right)} = 2 x$。",
+      "这是一个 1 阶线性常微分方程。",
+      "初值条件：$y{\\left(0 \\right)} = 1$。",
+      "解得：$$y{\\left(x \\right)} = x^{2} + 1$$",
+      "核验：把解代回原方程，两边恒等 ✓。"
+    ],
+    "answer": "x^{2} + 1",
+    "answer_latex": "x^{2} + 1",
+    "solver": "sympy.ode",
+    "confidence": 1.0,
+    "subject": "微分方程",
+    "sub_solutions": [],
+    "verification": {
+      "method": "解代回原方程",
+      "check": "residual == 0"
+    },
+    "elapsed": 0.039
+  },
+  {
+    "problem_id": "P21",
+    "problem_text": "Find the Laplace transform of $e^{-2t}$.",
+    "solved": true,
+    "steps": [
+      "求 $\\mathcal{L}\\{f(t)\\}$，其中 $f(t) = e^{- 2 t}$。",
+      "按定义 $F(s) = \\int_0^{\\infty} e^{-st} f(t)\\,dt$。",
+      "用到 $\\mathcal{L}\\{e^{at}\\} = \\dfrac{1}{s-a}$。",
+      "得 $F(s) = \\frac{1}{s + 2}$。"
+    ],
+    "answer": "\\frac{1}{s + 2}",
+    "answer_latex": "\\frac{1}{s + 2}",
+    "solver": "sympy.ode",
+    "confidence": 1.0,
+    "subject": "微分方程",
+    "sub_solutions": [],
+    "elapsed": 0.089
+  },
+  {
+    "problem_id": "P22",
+    "problem_text": "A mass of 2 kg experiences an acceleration of 3 m/s^2. Find the net force.",
+    "solved": true,
+    "steps": [
+      "识别为「牛顿第二定律」（F 合力, m 质量, a 加速度）。",
+      "选用公式：$F = a m$。",
+      "已知量代入：$m = 2$，$a = 3$。",
+      "代入数值计算：$ F = 6 $。"
+    ],
+    "answer": "6",
+    "answer_latex": "6",
+    "solver": "sympy.physics[牛顿第二定律]",
+    "confidence": 1.0,
+    "subject": "大学物理",
+    "sub_solutions": [],
+    "verification": {
+      "method": "量纲检查 + 数值代入",
+      "check": "已知量 {'m': 2.0, 'a': 3.0} 代入 牛顿第二定律"
+    },
+    "elapsed": 0.007
+  },
+  {
+    "problem_id": "P23",
+    "problem_text": "A mass of 4 kg moves at a velocity of 3 m/s. Find the kinetic energy.",
+    "solved": true,
+    "steps": [
+      "识别为「动能」（E_k 动能, m 质量, v 速度）。",
+      "选用公式：$E_{k} = \\frac{m v^{2}}{2}$。",
+      "已知量代入：$v = 3$，$m = 4$。",
+      "代入数值计算：$ E_{k} = 18 $。"
+    ],
+    "answer": "18",
+    "answer_latex": "18",
+    "solver": "sympy.physics[动能]",
+    "confidence": 1.0,
+    "subject": "大学物理",
+    "sub_solutions": [],
+    "verification": {
+      "method": "量纲检查 + 数值代入",
+      "check": "已知量 {'m': 4.0, 'v': 3.0} 代入 动能"
+    },
+    "elapsed": 0.004
+  },
+  {
+    "problem_id": "P24",
+    "problem_text": "Two point charges $q1 = 1e-6$ C and $q2 = 2e-6$ C are separated by a distance $r = 0.1$ m. Find the Coulomb force between them.",
+    "solved": true,
+    "steps": [
+      "识别为「库仑定律」（F 库仑力, q1 q2 电荷, r 距离）。",
+      "选用公式：$F = \\frac{k_{e} q_{1} q_{2}}{r^{2}}$。",
+      "已知量代入：$q_{1} = \\frac{1}{1000000}$，$q_{2} = \\frac{1}{500000}$，$r = \\frac{1}{10}$，$k_{e} = 8990000000$。",
+      "代入数值计算：$ F = \\frac{899}{500} $。"
+    ],
+    "answer": "\\frac{899}{500}",
+    "answer_latex": "\\frac{899}{500}",
+    "solver": "sympy.physics[库仑定律]",
+    "confidence": 1.0,
+    "subject": "大学物理",
+    "sub_solutions": [],
+    "verification": {
+      "method": "量纲检查 + 数值代入",
+      "check": "已知量 {'q1': 1e-06, 'q2': 2e-06, 'r': 0.1} 代入 库仑定律"
+    },
+    "elapsed": 0.056
+  },
+  {
+    "problem_id": "P25",
+    "problem_text": "A resistor carries a current of 2 A and has a resistance of 5 ohm. Find the voltage across it.",
+    "solved": true,
+    "steps": [
+      "识别为「欧姆定律」（V 电压, I 电流, R 电阻）。",
+      "选用公式：$V = I R$。",
+      "已知量代入：$I = 2$，$R = 5$。",
+      "代入数值计算：$ V = 10 $。"
+    ],
+    "answer": "10",
+    "answer_latex": "10",
+    "solver": "sympy.physics[欧姆定律]",
+    "confidence": 1.0,
+    "subject": "大学物理",
+    "sub_solutions": [],
+    "verification": {
+      "method": "量纲检查 + 数值代入",
+      "check": "已知量 {'I': 2.0, 'R': 5.0} 代入 欧姆定律"
+    },
+    "elapsed": 0.003
+  },
+  {
+    "problem_id": "P26",
+    "problem_text": "A simple pendulum has length $L = 1$ m. Find its period (take $g = 9.8$ m/s^2).",
+    "solved": true,
+    "steps": [
+      "识别为「单摆周期」（T_period 周期, L 摆长, g 重力加速度）。",
+      "选用公式：$T_{period} = 2 \\pi \\sqrt{\\frac{L}{g}}$。",
+      "已知量代入：$g = \\frac{49}{5}$，$L = 1$。",
+      "代入数值计算：$ T_{period} = \\frac{200709}{100000} $。"
+    ],
+    "answer": "\\frac{200709}{100000}",
+    "answer_latex": "\\frac{200709}{100000}",
+    "solver": "sympy.physics[单摆周期]",
+    "confidence": 1.0,
+    "subject": "大学物理",
+    "sub_solutions": [],
+    "verification": {
+      "method": "量纲检查 + 数值代入",
+      "check": "已知量 {'L': 1.0, 'g': 9.8} 代入 单摆周期"
+    },
+    "elapsed": 0.051
+  },
+  {
+    "problem_id": "P27",
+    "problem_text": "A wave has frequency 50 Hz and wavelength 2 m. Find the wave speed.",
+    "solved": true,
+    "steps": [
+      "识别为「波速」（v 波速, f 频率, lam 波长）。",
+      "选用公式：$v = f lam$。",
+      "已知量代入：$f = 50$，$lam = 2$。",
+      "代入数值计算：$ v = 100 $。"
+    ],
+    "answer": "100",
+    "answer_latex": "100",
+    "solver": "sympy.physics[波速]",
+    "confidence": 1.0,
+    "subject": "大学物理",
+    "sub_solutions": [],
+    "verification": {
+      "method": "量纲检查 + 数值代入",
+      "check": "已知量 {'f': 50.0, 'lam': 2.0} 代入 波速"
+    },
+    "elapsed": 0.003
+  },
+  {
+    "problem_id": "P28",
+    "problem_text": "The following table gives the distribution of $X$. Find the expected value of $X$.\n\n| x | p |\n|---|---|\n| 0 | 0.2 |\n| 1 | 0.5 |\n| 2 | 0.3 |",
+    "solved": true,
+    "steps": [
+      "读入分布列：$x_i$ 与 $p_i$。",
+      "期望 $E(X) = \\sum_i x_i p_i$。",
+      "$x_{1}p_{1} = 0.0 \\times 0.2 = 0$，$x_{2}p_{2} = 1.0 \\times 0.5 = 0.5$，$x_{3}p_{3} = 2.0 \\times 0.3 = 0.6$",
+      "$E(X) = 1.1$。",
+      "$\\operatorname{Var}(X) = E(X^2) - [E(X)]^2 = \\sum_i p_i(x_i - \\mu)^2$。",
+      "$\\operatorname{Var}(X) = 0.49$，$\\sigma = 0.7$。"
+    ],
+    "answer": "E(X) = 1.1",
+    "answer_latex": "E(X) = 1.1",
+    "solver": "sympy.probability",
+    "confidence": 1.0,
+    "subject": "概率统计",
+    "sub_solutions": [],
+    "elapsed": 0.001
+  },
+  {
+    "problem_id": "P29",
+    "problem_text": "The following table gives the distribution of $X$. Find the variance of $X$.\n\n| x | p |\n|---|---|\n| 0 | 0.2 |\n| 1 | 0.5 |\n| 2 | 0.3 |",
+    "solved": true,
+    "steps": [
+      "读入分布列：$x_i$ 与 $p_i$。",
+      "期望 $E(X) = \\sum_i x_i p_i$。",
+      "$x_{1}p_{1} = 0.0 \\times 0.2 = 0$，$x_{2}p_{2} = 1.0 \\times 0.5 = 0.5$，$x_{3}p_{3} = 2.0 \\times 0.3 = 0.6$",
+      "$E(X) = 1.1$。",
+      "$\\operatorname{Var}(X) = E(X^2) - [E(X)]^2 = \\sum_i p_i(x_i - \\mu)^2$。",
+      "$\\operatorname{Var}(X) = 0.49$，$\\sigma = 0.7$。"
+    ],
+    "answer": "\\operatorname{Var}(X) = 0.49,\\ \\sigma = 0.7",
+    "answer_latex": "\\operatorname{Var}(X) = 0.49,\\ \\sigma = 0.7",
+    "solver": "sympy.probability",
+    "confidence": 1.0,
+    "subject": "概率统计",
+    "sub_solutions": [],
+    "elapsed": 0.0
+  },
+  {
+    "problem_id": "P30",
+    "problem_text": "Let $X \\sim B(10, 0.5)$. Find the expected value of $X$.",
+    "solved": true,
+    "steps": [
+      "$X \\sim B(n=10,\\ p=0.5)$。",
+      "二项分布期望 $E(X) = np = 10\\times0.5 = 5$。",
+      "方差 $\\operatorname{Var}(X) = np(1-p) = 2.5$。"
+    ],
+    "answer": "E(X) = 5",
+    "answer_latex": "E(X) = 5",
+    "solver": "sympy.probability",
+    "confidence": 1.0,
+    "subject": "概率统计",
+    "sub_solutions": [],
+    "elapsed": 0.001
+  },
+  {
+    "problem_id": "P31",
+    "problem_text": "Let $X \\sim N(0,1)$. Compute $P(X <= 1.96)$.",
+    "solved": true,
+    "steps": [
+      "$X \\sim N(0.0, 1.0^2)$，求 $P(X \\le 1.96)$。",
+      "标准化 $z = \\dfrac{x-\\mu}{\\sigma} = \\dfrac{1.96-0.0}{1.0} = 1.9600$。",
+      "查标准正态表（或 erf 计算）得 $\\Phi(1.9600) = 0.975002$。",
+      "$P = 0.975002$。"
+    ],
+    "answer": "0.975002",
+    "answer_latex": "0.975002",
+    "solver": "sympy.probability",
+    "confidence": 1.0,
+    "subject": "概率统计",
+    "sub_solutions": [],
+    "elapsed": 0.001
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "input": "samples/fixtures/domain_benchmark.md",
+  "output_dir": "output\\benchmark",
+  "started": "2026-10-09T22:29:25",
+  "stage1": {
+    "format": ".md",
+    "handler": "read_markdown",
+    "chars": 2909,
+    "sections": 2
+  },
+  "stage2": {
+    "problems": 31,
+    "subjects": {
+      "linalg": 8,
+      "calculus": 7,
+      "ode": 6,
+      "physics": 5,
+      "unknown": 1,
+      "probability": 4
+    }
+  },
+  "stage3": {
+    "total": 31,
+    "solved": 31,
+    "rate": 1.0,
+    "by_solver": {
+      "sympy.linalg": 8,
+      "sympy.calculus": 7,
+      "sympy.ode": 6,
+      "sympy.physics": 6,
+      "sympy.probability": 4
+    },
+    "by_subject": {
+      "线性代数": {
+        "solved": 8,
+        "total": 8
+      },
+      "微积分": {
+        "solved": 7,
+        "total": 7
+      },
+      "微分方程": {
+        "solved": 6,
+        "total": 6
+      },
+      "大学物理": {
+        "solved": 6,
+        "total": 6
+      },
+      "概率统计": {
+        "solved": 4,
+        "total": 4
+      }
+    }
+  },
+  "stage4": {
+    "tex": "output\\benchmark\\homework.tex",
+    "md": "output\\benchmark\\homework.md",
+    "html": "output\\benchmark\\homework.html"
+  },
+  "stage5": {
+    "ok": true,
+    "tier": "browser",
+    "engine": "msedge headless 打印（MathJax 本地渲染）",
+    "pdf": "output\\benchmark\\homework.pdf",
+    "validation": {
+      "path": "output\\benchmark\\homework.pdf",
+      "exists": true,
+      "size": 832358,
+      "pages": 18,
+      "text_chars": 1169,
+      "ok": true,
+      "notes": []
+    }
+  },
+  "elapsed": 5.6,
+  "finished": "2026-10-09T22:29:31"
+}
