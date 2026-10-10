@@ -1,0 +1,32 @@
+# C4C homework-solver 依赖
+# ---------------------------------------------------------------------------
+# 安装：pip install -r requirements.txt
+# 全部为纯 Python 包，Windows / macOS / Linux 都能装，不需要编译器。
+
+# ── 必需 ──────────────────────────────────────────────────────────────
+sympy>=1.12            # 符号计算内核（5 个学科求解器的地基）
+pyyaml>=6.0            # 读取 config.yaml
+
+# ── 输入格式扩展（Stage 1）────────────────────────────────────────────
+pdfplumber>=0.9        # PDF 文本抽取（首选；纯 Python）
+pypdf>=4.0             # PDF 兜底（pdfplumber 失败时）
+python-docx>=1.0       # Word .docx 摄入
+
+# ── PDF 输出（Stage 5）────────────────────────────────────────────────
+# 三级降级的第 3 级。前两级（LaTeX / 浏览器 headless）不需要 Python 包：
+#   Tier 1  xelatex / pdflatex / tectonic —— 需另装 TeX
+#   Tier 2  Edge / Chrome headless —— 系统自带，配合 references/mathjax/tex-svg.js
+reportlab>=4.0         # 纯 Python PDF 生成（最后兜底）
+pypdfium2>=4.0         # 编译后校验 PDF（页数 / 文本层），也是把 PDF 渲染成图做人工核对用
+
+# ── 可选：OCR（扫描件/拍照作业）──────────────────────────────────────
+# 需要额外安装 Tesseract-OCR 可执行文件：
+#   Windows https://github.com/UB-Mannheim/tesseract/wiki
+#   macOS   brew install tesseract tesseract-lang
+#   Linux   sudo apt install tesseract-ocr tesseract-ocr-chi-sim
+# pytesseract>=0.3
+# Pillow>=10.0
+
+# ── 可选：PDF 公式提取增强 ────────────────────────────────────────────
+# 装了之后 sympy 可以直接解析 LaTeX（本项目自带零依赖解析器，所以非必需）
+# antlr4-python3-runtime==4.11
